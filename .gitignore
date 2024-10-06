@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+venv/
+ENV/
+venv.bak/
+.env
+
+# Django
+*.log
+# *.sqlite3
+# db.sqlite3
+media/
+staticfiles/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Migrations
+*/migrations/*.py
+*/migrations/*.pyc
+*/migrations/__init__.py
+
+# Caches
+*.cache
+*.egg-info/
+dist/
+build/
+
+# Test files
+*.cover
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Sensitive files
+*.env
+*.secret
