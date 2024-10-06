@@ -20,8 +20,21 @@ class District(models.Model):
     def __str__(self):
         return self.name
 
+class City(models.Model):
+    district = models.ForeignKey(District, related_name='cities', on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    city_type = models.CharField(max_length=20, choices=[
+        ('metropolitan', 'Metropolitan'),
+        ('sub_metropolitan', 'Sub-Metropolitan'),
+        ('municipality', 'Municipality'),
+        ('rural_municipality', 'Rural Municipality')
+    ])
+
+    def __str__(self):
+        return self.name
+
 class Ward(models.Model):
-    district = models.ForeignKey(District, related_name='wards', on_delete=models.CASCADE)
+    city = models.ForeignKey(City, related_name='wards', on_delete=models.CASCADE,null=True)
     ward_no = models.PositiveIntegerField()  # Ward number
     name = models.CharField(max_length=100)  # Name of the ward
 

@@ -1,6 +1,6 @@
 from rest_framework_nested import routers
 from django.urls import path, include
-from .views import ProvinceViewSet, DistrictViewSet, WardViewSet, PlaceViewSet
+from .views import ProvinceViewSet, DistrictViewSet, CityViewSet, WardViewSet, PlaceViewSet
 
 # Root router
 router = routers.SimpleRouter()
@@ -10,9 +10,13 @@ router.register(r'provinces', ProvinceViewSet)
 district_router = routers.NestedSimpleRouter(router, r'provinces', lookup='province')
 district_router.register(r'districts', DistrictViewSet, basename='province-districts')
 
-# Nested router for wards under a district
-ward_router = routers.NestedSimpleRouter(district_router, r'districts', lookup='district')
-ward_router.register(r'wards', WardViewSet, basename='district-wards')
+# Nested router for cities under a district
+city_router = routers.NestedSimpleRouter(district_router, r'districts', lookup='district')
+city_router.register(r'cities', CityViewSet, basename='district-cities')
+
+# Nested router for wards under a city
+ward_router = routers.NestedSimpleRouter(city_router, r'cities', lookup='city')
+ward_router.register(r'wards', WardViewSet, basename='city-wards')
 
 # Nested router for places under a ward
 place_router = routers.NestedSimpleRouter(ward_router, r'wards', lookup='ward')
@@ -22,6 +26,7 @@ place_router.register(r'places', PlaceViewSet, basename='ward-places')
 urlpatterns = [
     path('api/', include(router.urls)),
     path('api/', include(district_router.urls)),
+    path('api/', include(city_router.urls)),
     path('api/', include(ward_router.urls)),
     path('api/', include(place_router.urls)),
 ]
