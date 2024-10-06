@@ -18,11 +18,84 @@ Nepal Places API is an open-source RESTful API that provides detailed informatio
 - Access places within each district.
 
 ## API Endpoints
-- **GET /api/provinces/**: Retrieve all provinces and their details.
+
+
+## Province Endpoints
+- **List all provinces**  
+  `GET /api/provinces/`
   
-- **GET /api/provinces/{province_id}/districts/**: Retrieve all districts for a specific province.
+- **Retrieve a specific province by ID**  
+  `GET /api/provinces/{province_id}/`
   
-- **GET /api/districts/{district_id}/places/**: Retrieve all places within a specific district.
+- **Create a new province**  
+  `POST /api/provinces/`
+  
+- **Update an existing province**  
+  `PUT /api/provinces/{province_id}/`
+  
+- **Partial update of a province**  
+  `PATCH /api/provinces/{province_id}/`
+  
+- **Delete a province**  
+  `DELETE /api/provinces/{province_id}/`
+
+## District Endpoints
+- **List all districts in a specific province**  
+  `GET /api/provinces/{province_id}/districts/`
+  
+- **Retrieve a specific district by ID within a province**  
+  `GET /api/provinces/{province_id}/districts/{district_id}/`
+  
+- **Create a new district within a province**  
+  `POST /api/provinces/{province_id}/districts/`
+  
+- **Update an existing district**  
+  `PUT /api/provinces/{province_id}/districts/{district_id}/`
+  
+- **Partial update of a district**  
+  `PATCH /api/provinces/{province_id}/districts/{district_id}/`
+  
+- **Delete a district**  
+  `DELETE /api/provinces/{province_id}/districts/{district_id}/`
+
+## Ward Endpoints
+- **List all wards in a specific district**  
+  `GET /api/provinces/{province_id}/districts/{district_id}/wards/`
+  
+- **Retrieve a specific ward by ID within a district**  
+  `GET /api/provinces/{province_id}/districts/{district_id}/wards/{ward_id}/`
+  
+- **Create a new ward within a district**  
+  `POST /api/provinces/{province_id}/districts/{district_id}/wards/`
+  
+- **Update an existing ward**  
+  `PUT /api/provinces/{province_id}/districts/{district_id}/wards/{ward_id}/`
+  
+- **Partial update of a ward**  
+  `PATCH /api/provinces/{province_id}/districts/{district_id}/wards/{ward_id}/`
+  
+- **Delete a ward**  
+  `DELETE /api/provinces/{province_id}/districts/{district_id}/wards/{ward_id}/`
+
+## Place Endpoints
+- **List all places in a specific ward**  
+  `GET /api/provinces/{province_id}/districts/{district_id}/wards/{ward_id}/places/`
+  
+- **Retrieve a specific place by ID within a ward**  
+  `GET /api/provinces/{province_id}/districts/{district_id}/wards/{ward_id}/places/{place_id}/`
+  
+- **Create a new place within a ward**  
+  `POST /api/provinces/{province_id}/districts/{district_id}/wards/{ward_id}/places/`
+  
+- **Update an existing place**  
+  `PUT /api/provinces/{province_id}/districts/{district_id}/wards/{ward_id}/places/{place_id}/`
+  
+- **Partial update of a place**  
+  `PATCH /api/provinces/{province_id}/districts/{district_id}/wards/{ward_id}/places/{place_id}/`
+  
+- **Delete a place**  
+  `DELETE /api/provinces/{province_id}/districts/{district_id}/wards/{ward_id}/places/{place_id}/`
+
 
 ## Installation
 
