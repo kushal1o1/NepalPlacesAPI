@@ -1,6 +1,7 @@
 from django.db import models
 
 class Province(models.Model):
+    id = models.PositiveIntegerField(primary_key=True)  
     name = models.CharField(max_length=100)
     headquarters = models.CharField(max_length=100)  # Capital City
     area = models.FloatField()  # Area in km²

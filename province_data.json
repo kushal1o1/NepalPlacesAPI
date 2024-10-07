@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Koshi",
+        "headquarters": "Biratnagar",
+        "area": 25905,
+        "population": 4972021,
+        "number_of_districts": 14
+    },
+    {
+        "id": 2,
+        "name": "Madhesh",
+        "headquarters": "Janakpur",
+        "area": 9661,
+        "population": 6126288,
+        "number_of_districts": 8
+    },
+    {
+        "id": 3,
+        "name": "Bagmati",
+        "headquarters": "Hetauda",
+        "area": 20300,
+        "population": 6084042,
+        "number_of_districts": 13
+    },
+    {
+        "id": 4,
+        "name": "Gandaki",
+        "headquarters": "Pokhara",
+        "area": 21504,
+        "population": 2479745,
+        "number_of_districts": 11
+    },
+    {
+        "id": 5,
+        "name": "Lumbini",
+        "headquarters": "Deukhuri",
+        "area": 22288,
+        "population": 5124225,
+        "number_of_districts": 12
+    },
+    {
+        "id": 6,
+        "name": "Karnali",
+        "headquarters": "Birendranagar",
+        "area": 27984,
+        "population": 1694889,
+        "number_of_districts": 10
+    },
+    {
+        "id": 7,
+        "name": "Sudurpashchim",
+        "headquarters": "Godawari",
+        "area": 19999.28,
+        "population": 2711270,
+        "number_of_districts": 9
+    }
+]

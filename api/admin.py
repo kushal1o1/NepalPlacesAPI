@@ -1,9 +1,10 @@
 from django.contrib import admin
 from .models import Province, District, City, Ward, Place
+from import_export.admin import ImportExportModelAdmin
 
 # Province Admin Configuration
 @admin.register(Province)
-class ProvinceAdmin(admin.ModelAdmin):
+class ProvinceAdmin(ImportExportModelAdmin):
     list_display = ('name', 'headquarters', 'area', 'population', 'number_of_districts')
     search_fields = ('name', 'headquarters')
     list_filter = ('name',)
@@ -15,7 +16,7 @@ class ProvinceAdmin(admin.ModelAdmin):
 
 # District Admin Configuration
 @admin.register(District)
-class DistrictAdmin(admin.ModelAdmin):
+class DistrictAdmin(ImportExportModelAdmin):
     list_display = ('name', 'headquarters', 'area', 'population', 'province')
     search_fields = ('name', 'headquarters', 'province__name')
     list_filter = ('province', 'name')
@@ -28,7 +29,7 @@ class DistrictAdmin(admin.ModelAdmin):
 
 # City Admin Configuration
 @admin.register(City)
-class CityAdmin(admin.ModelAdmin):
+class CityAdmin(ImportExportModelAdmin):
     list_display = ('name', 'city_type', 'district')
     search_fields = ('name', 'city_type')
     list_filter = ('city_type', 'district')
