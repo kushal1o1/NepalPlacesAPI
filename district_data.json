@@ -1,244 +1,244 @@
 [
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Bhojpur",
         "headquarters": "Bhojpur",
         "area": 1507,
         "population": 182459
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Dhankuta",
         "headquarters": "Dhankuta",
         "area": 891,
         "population": 163412
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Ilam",
         "headquarters": "Ilam",
         "area": 1703,
         "population": 290254
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Jhapa",
         "headquarters": "Bhadrapur",
         "area": 1606,
         "population": 812650
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Khotang",
         "headquarters": "Diktel",
         "area": 1591,
         "population": 206312
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Morang",
         "headquarters": "Biratnagar",
         "area": 1855,
         "population": 965370
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Okhaldhunga",
         "headquarters": "Okhaldhunga",
         "area": 1074,
         "population": 147984
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Panchthar",
         "headquarters": "Phidim",
         "area": 1241,
         "population": 191817
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Sankhuwasabha",
         "headquarters": "Khandbari",
         "area": 3480,
         "population": 158742
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Solukhumbu",
         "headquarters": "Salleri",
         "area": 3312,
         "population": 105886
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Sunsari",
         "headquarters": "Inaruwa",
         "area": 1257,
         "population": 763487
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Taplejung",
         "headquarters": "Taplejung",
         "area": 3646,
         "population": 127461
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Terhathum",
         "headquarters": "Myanglung",
         "area": 679,
         "population": 113111
     },
     {
-        "province": 1  ,
+        "province": "Koshi"  ,
         "name": "Udayapur",
         "headquarters": "Gaighat",
         "area": 2063,
         "population": 317532
     },
     {
-        "province": 2,
+        "province": "Madhesh",
         "name": "Bara",
         "headquarters": "Kalaiya",
         "area": 1190,
         "population": 687708
     },
     {
-        "province": 2,
+        "province": "Madhesh",
         "name": "Dhanusha",
         "headquarters": "Janakpur",
         "area": 1180,
         "population": 754777
     },
     {
-        "province": 2,
+        "province": "Madhesh",
         "name": "Mahottari",
         "headquarters": "Jaleshwar",
         "area": 1002,
         "population": 627580
     },
     {
-        "province": 2,
+        "province": "Madhesh",
         "name": "Parsa",
         "headquarters": "Birgunj",
         "area": 1353,
         "population": 601017
     },
     {
-        "province": 2,
+        "province": "Madhesh",
         "name": "Rautahat",
         "headquarters": "Gaur",
         "area": 1126,
         "population": 686722
     },
     {
-        "province": 2,
+        "province": "Madhesh",
         "name": "Saptari",
         "headquarters": "Rajbiraj",
         "area": 1363,
         "population": 639284
     },
     {
-        "province": 2,
+        "province": "Madhesh",
         "name": "Sarlahi",
         "headquarters": "Malangwa",
         "area": 1259,
         "population": 769729
     },
     {
-        "province": 2,
+        "province": "Madhesh",
         "name": "Siraha",
         "headquarters": "Siraha",
         "area": 1188,
         "population": 637328
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Bhaktapur",
         "headquarters": "Bhaktapur",
         "area": 119,
         "population": 304651
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Chitwan",
         "headquarters": "Bharatpur",
         "area": 2238,
         "population": 579984
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Dhading",
         "headquarters": "Dhading Besi",
         "area": 1926,
         "population": 336067
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Dolakha",
         "headquarters": "Charikot",
         "area": 2191,
         "population": 186557
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Kathmandu",
         "headquarters": "Kathmandu",
         "area": 395,
         "population": 2018532
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Kavrepalanchok",
         "headquarters": "Dhulikhel",
         "area": 1396,
         "population": 381937
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Lalitpur",
         "headquarters": "Patan",
         "area": 385,
         "population": 468132
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Makwanpur",
         "headquarters": "Hetauda",
         "area": 2426,
         "population": 420477
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Nuwakot",
         "headquarters": "Bidur",
         "area": 1121,
         "population": 277471
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Ramechhap",
         "headquarters": "Manthali",
         "area": 1546,
         "population": 202646
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Rasuwa",
         "headquarters": "Dhunche",
         "area": 1544,
         "population": 43289
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Sindhuli",
         "headquarters": "Kamalamai",
         "area": 2491,
         "population": 296192
     },
     {
-        "province": 3,
+        "province": "Bagmati",
         "name": "Sindhupalchok",
         "headquarters": "Chautara",
         "area": 2542,
@@ -246,77 +246,77 @@
     },
 
         {
-            "province": 4,
+            "province": "Gandaki",
             "name": "Baglung",
             "headquarters": "Baglung",
             "area": 1784,
             "population": 268613
         },
         {
-            "province": 4,
+            "province": "Gandaki",
             "name": "Gorkha",
             "headquarters": "Gorkha",
             "area": 3610,
             "population": 271061
         },
         {
-            "province": 4,
+            "province": "Gandaki",
             "name": "Kaski",
             "headquarters": "Pokhara",
             "area": 2017,
             "population": 492098
         },
         {
-            "province": 4,
+            "province": "Gandaki",
             "name": "Lamjung",
             "headquarters": "Besisahar",
             "area": 1692,
             "population": 167724
         },
         {
-            "province": 4,
+            "province": "Gandaki",
             "name": "Manang",
             "headquarters": "Chame",
             "area": 2246,
             "population": 6538
         },
         {
-            "province": 4,
+            "province": "Gandaki",
             "name": "Mustang",
             "headquarters": "Jomsom",
             "area": 3573,
             "population": 13452
         },
         {
-            "province": 4,
+            "province": "Gandaki",
             "name": "Myagdi",
             "headquarters": "Beni",
             "area": 2297,
             "population": 113641
         },
         {
-            "province": 4,
+            "province": "Gandaki",
             "name": "Nawalpur",
             "headquarters": "Kawasoti",
             "area": 1043,
             "population": 310864
         },
         {
-            "province": 4,
+            "province": "Gandaki",
             "name": "Parbat",
             "headquarters": "Kusma",
             "area": 494,
             "population": 157826
         },
         {
-            "province": 4,
+            "province": "Gandaki",
             "name": "Syangja",
             "headquarters": "Putalibazar",
             "area": 1164,
             "population": 289148
         },
         {
-            "province": 4,
+            "province": "Gandaki",
             "name": "Tanahun",
             "headquarters": "Damauli",
             "area": 1546,
@@ -324,217 +324,217 @@
         },
 
             {
-                "province": 5,
+                "province": "Lumbini",
                 "name": "Arghakhanchi",
                 "headquarters": "Sandhikharka",
                 "area": 1193,
                 "population": 197632
             },
             {
-                "province": 5,
+                "province": "Lumbini",
                 "name": "Banke",
                 "headquarters": "Nepalgunj",
                 "area": 2337,
                 "population": 491313
             },
             {
-                "province": 5,
+                "province": "Lumbini",
                 "name": "Bardiya",
                 "headquarters": "Gulariya",
                 "area": 2025,
                 "population": 426576
             },
             {
-                "province": 5,
+                "province": "Lumbini",
                 "name": "Dang",
                 "headquarters": "Ghorahi",
                 "area": 2955,
                 "population": 548141
             },
             {
-                "province": 5,
+                "province": "Lumbini",
                 "name": "Gulmi",
                 "headquarters": "Tamghas",
                 "area": 1149,
                 "population": 268613
             },
             {
-                "province": 5,
+                "province": "Lumbini",
                 "name": "Kapilvastu",
                 "headquarters": "Taulihawa",
                 "area": 1738,
                 "population": 571936
             },
             {
-                "province": 5,
+                "province": "Lumbini",
                 "name": "Parasi",
                 "headquarters": "Ramgram",
                 "area": 634,
                 "population": 321058
             },
             {
-                "province": 5,
+                "province": "Lumbini",
                 "name": "Palpa",
                 "headquarters": "Tansen",
                 "area": 1373,
                 "population": 261180
             },
             {
-                "province": 5,
+                "province": "Lumbini",
                 "name": "Pyuthan",
                 "headquarters": "Pyuthan",
                 "area": 1309,
                 "population": 228102
             },
             {
-                "province": 5,
+                "province": "Lumbini",
                 "name": "Rolpa",
                 "headquarters": "Liwang",
                 "area": 1879,
                 "population": 224506
             },
             {
-                "province": 5,
+                "province": "Lumbini",
                 "name": "Rukum East",
                 "headquarters": "Rukumkot",
                 "area": 1213,
                 "population": 107618
             },
             {
-                "province": 5,
+                "province": "Lumbini",
                 "name": "Rupandehi",
                 "headquarters": "Bhairahawa",
                 "area": 1360,
                 "population": 880196
             },
                 {
-                    "province": 6,
+                    "province": "Karnali",
                     "name": "Dailekh",
                     "headquarters": "Dailekh",
                     "area": 1502,
                     "population": 261770
                 },
                 {
-                    "province": 6,
+                    "province": "Karnali",
                     "name": "Dolpa",
                     "headquarters": "Dunai",
                     "area": 7889,
                     "population": 36700
                 },
                 {
-                    "province": 6,
+                    "province": "Karnali",
                     "name": "Humla",
                     "headquarters": "Simikot",
                     "area": 5655,
                     "population": 50458
                 },
                 {
-                    "province": 6,
+                    "province": "Karnali",
                     "name": "Jajarkot",
                     "headquarters": "Khalanga",
                     "area": 2230,
                     "population": 171304
                 },
                 {
-                    "province": 6,
+                    "province": "Karnali",
                     "name": "Jumla",
                     "headquarters": "Jumla",
                     "area": 2531,
                     "population": 108921
                 },
                 {
-                    "province": 6,
+                    "province": "Karnali",
                     "name": "Kalikot",
                     "headquarters": "Manma",
                     "area": 1741,
                     "population": 136948
                 },
                 {
-                    "province": 6,
+                    "province": "Karnali",
                     "name": "Mugu",
                     "headquarters": "Gamgadhi",
                     "area": 3535,
                     "population": 55286
                 },
                 {
-                    "province": 6,
+                    "province": "Karnali",
                     "name": "Rukum West",
                     "headquarters": "Musikot",
                     "area": 1213,
                     "population": 154272
                 },
                 {
-                    "province": 6,
+                    "province": "Karnali",
                     "name": "Salyan",
                     "headquarters": "Salyan",
                     "area": 1462,
                     "population": 242444
                 },
                 {
-                    "province": 6,
+                    "province": "Karnali",
                     "name": "Surkhet",
                     "headquarters": "Birendranagar",
                     "area": 2451,
                     "population": 350804
                 },
                     {
-                        "province": 7,
+                        "province": "Sudurpashchim",
                         "name": "Achham",
                         "headquarters": "Mangalsen",
                         "area": 1692,
                         "population": 257477
                     },
                     {
-                        "province": 7,
+                        "province": "Sudurpashchim",
                         "name": "Baitadi",
                         "headquarters": "Dasharathchand",
                         "area": 1519,
                         "population": 250898
                     },
                     {
-                        "province": 7,
+                        "province": "Sudurpashchim",
                         "name": "Bajhang",
                         "headquarters": "Chainpur",
                         "area": 3420,
                         "population": 195159
                     },
                     {
-                        "province": 7,
+                        "province": "Sudurpashchim",
                         "name": "Bajura",
                         "headquarters": "Martadi",
                         "area": 2188,
                         "population": 136948
                     },
                     {
-                        "province": 7,
+                        "province": "Sudurpashchim",
                         "name": "Dadeldhura",
                         "headquarters": "Dadeldhura",
                         "area": 1538,
                         "population": 142094
                     },
                     {
-                        "province": 7,
+                        "province": "Sudurpashchim",
                         "name": "Darchula",
                         "headquarters": "Darchula",
                         "area": 2322,
                         "population": 133464
                     },
                     {
-                        "province": 7,
+                        "province": "Sudurpashchim",
                         "name": "Doti",
                         "headquarters": "Dipayal Silgadhi",
                         "area": 2025,
                         "population": 207066
                     },
                     {
-                        "province": 7,
+                        "province": "Sudurpashchim",
                         "name": "Kailali",
                         "headquarters": "Dhangadhi",
                         "area": 3235,
                         "population": 775709
                     },
                     {
-                        "province": 7,
+                        "province": "Sudurpashchim",
                         "name": "Kanchanpur",
                         "headquarters": "Bhimdatta",
                         "area": 1610,

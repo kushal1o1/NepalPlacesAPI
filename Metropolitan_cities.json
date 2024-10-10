@@ -1,0 +1,8 @@
+[
+    { "district": "Kathmandu", "name": "Kathmandu", "city_type": "metropolitan" },
+    { "district": "Lalitpur", "name": "Lalitpur", "city_type": "metropolitan" },
+    { "district": "Chitwan", "name": "Bharatpur", "city_type": "metropolitan" },
+    { "district": "Kaski", "name": "Pokhara", "city_type": "metropolitan" },
+    { "district": "Morang", "name": "Biratnagar", "city_type": "metropolitan" },
+    { "district": "Parsa", "name": "Birgunj", "city_type": "metropolitan" }
+]

@@ -1,0 +1,13 @@
+[
+    { "district": "Sunsari", "name": "Dharan", "city_type": "sub_metropolitan" },
+    { "district": "Sunsari", "name": "Itahari", "city_type": "sub_metropolitan" },
+    { "district": "Dhanusha", "name": "Janakpur", "city_type": "sub_metropolitan" },
+    { "district": "Bara", "name": "Jitpur_Simara", "city_type": "sub_metropolitan" },
+    { "district": "Bara", "name": "Kalaiya", "city_type": "sub_metropolitan" },
+    { "district": "Makwanpur", "name": "Hetauda", "city_type": "sub_metropolitan" },
+    { "district": "Rupandehi", "name": "Butwal", "city_type": "sub_metropolitan" },
+    { "district": "Dang", "name": "Ghorahi", "city_type": "sub_metropolitan" },
+    { "district": "Dang", "name": "Tulsipur", "city_type": "sub_metropolitan" },
+    { "district": "Banke", "name": "Nepalgunj", "city_type": "sub_metropolitan" },
+    { "district": "Kailali", "name": "Dhangadhi", "city_type": "sub_metropolitan" }
+]

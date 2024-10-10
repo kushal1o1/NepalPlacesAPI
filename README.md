@@ -18,102 +18,25 @@ Nepal Places API is an open-source RESTful API that provides detailed informatio
 - Access places within each district.
 
 ## API Endpoints
+### Provinces
+- `GET /api/provinces/` - List all provinces
+- `GET /api/provinces/{province_name}/` - Retrieve a specific province
 
-### Province Endpoints
-- **List all provinces**  
-  `GET /api/provinces/`
-  
-- **Retrieve a specific province by ID**  
-  `GET /api/provinces/{province_id}/`
-  
-- **Create a new province**  
-  `POST /api/provinces/`
-  
-- **Update an existing province**  
-  `PUT /api/provinces/{province_id}/`
-  
-- **Partial update of a province**  
-  `PATCH /api/provinces/{province_id}/`
-  
-- **Delete a province**  
-  `DELETE /api/provinces/{province_id}/`
+### Districts
+- `GET /api/provinces/{province_name}/districts/` - List all districts within a province
+- `GET /api/provinces/{province_name}/districts/{district_name}/` - Retrieve a specific district within a province
 
-### District Endpoints
-- **List all districts in a specific province**  
-  `GET /api/provinces/{province_id}/districts/`
-  
-- **Retrieve a specific district by ID within a province**  
-  `GET /api/provinces/{province_id}/districts/{district_id}/`
-  
-- **Create a new district within a province**  
-  `POST /api/provinces/{province_id}/districts/`
-  
-- **Update an existing district**  
-  `PUT /api/provinces/{province_id}/districts/{district_id}/`
-  
-- **Partial update of a district**  
-  `PATCH /api/provinces/{province_id}/districts/{district_id}/`
-  
-- **Delete a district**  
-  `DELETE /api/provinces/{province_id}/districts/{district_id}/`
+### Cities
+- `GET /api/provinces/{province_name}/districts/{district_name}/cities/` - List all cities within a district
+- `GET /api/provinces/{province_name}/districts/{district_name}/cities/{city_name}/` - Retrieve a specific city within a district
 
-### City Endpoints
-- **List all cities in a specific district**  
-  `GET /api/provinces/{province_id}/districts/{district_id}/cities/`
-  
-- **Retrieve a specific city by ID within a district**  
-  `GET /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/`
-  
-- **Create a new city within a district**  
-  `POST /api/provinces/{province_id}/districts/{district_id}/cities/`
-  
-- **Update an existing city**  
-  `PUT /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/`
-  
-- **Partial update of a city**  
-  `PATCH /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/`
-  
-- **Delete a city**  
-  `DELETE /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/`
+### Wards
+- `GET /api/provinces/{province_name}/districts/{district_name}/cities/{city_name}/wards/` - List all wards within a city
+- `GET /api/provinces/{province_name}/districts/{district_name}/cities/{city_name}/wards/{ward_name}/` - Retrieve a specific ward within a city
 
-### Ward Endpoints
-- **List all wards in a specific city**  
-  `GET /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/wards/`
-  
-- **Retrieve a specific ward by ID within a city**  
-  `GET /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/wards/{ward_id}/`
-  
-- **Create a new ward within a city**  
-  `POST /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/wards/`
-  
-- **Update an existing ward**  
-  `PUT /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/wards/{ward_id}/`
-  
-- **Partial update of a ward**  
-  `PATCH /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/wards/{ward_id}/`
-  
-- **Delete a ward**  
-  `DELETE /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/wards/{ward_id}/`
-
-### Place Endpoints
-- **List all places in a specific ward**  
-  `GET /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/wards/{ward_id}/places/`
-  
-- **Retrieve a specific place by ID within a ward**  
-  `GET /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/wards/{ward_id}/places/{place_id}/`
-  
-- **Create a new place within a ward**  
-  `POST /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/wards/{ward_id}/places/`
-  
-- **Update an existing place**  
-  `PUT /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/wards/{ward_id}/places/{place_id}/`
-  
-- **Partial update of a place**  
-  `PATCH /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/wards/{ward_id}/places/{place_id}/`
-  
-- **Delete a place**  
-  `DELETE /api/provinces/{province_id}/districts/{district_id}/cities/{city_id}/wards/{ward_id}/places/{place_id}/`
-
+### Places
+- `GET /api/provinces/{province_name}/districts/{district_name}/cities/{city_name}/wards/{ward_name}/places/` - List all places within a ward
+- `GET /api/provinces/{province_name}/districts/{district_name}/cities/{city_name}/wards/{ward_name}/places/{place_name}/` - Retrieve a specific place within a ward
 ## Installation
 
 ### Prerequisites

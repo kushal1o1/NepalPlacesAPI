@@ -1,32 +1,14 @@
-from rest_framework_nested import routers
 from django.urls import path, include
+from rest_framework.routers import DefaultRouter
 from .views import ProvinceViewSet, DistrictViewSet, CityViewSet, WardViewSet, PlaceViewSet
 
-# Root router
-router = routers.SimpleRouter()
-router.register(r'provinces', ProvinceViewSet)
+router = DefaultRouter()
+router.register(r'provinces', ProvinceViewSet, basename='province')
+router.register(r'provinces/(?P<province_name>[^/.]+)/districts', DistrictViewSet, basename='district')
+router.register(r'provinces/(?P<province_name>[^/.]+)/districts/(?P<district_name>[^/.]+)/cities', CityViewSet, basename='city')
+router.register(r'provinces/(?P<province_name>[^/.]+)/districts/(?P<district_name>[^/.]+)/cities/(?P<city_name>[^/.]+)/wards', WardViewSet, basename='ward')
+router.register(r'provinces/(?P<province_name>[^/.]+)/districts/(?P<district_name>[^/.]+)/cities/(?P<city_name>[^/.]+)/wards/(?P<ward_name>[^/.]+)/places', PlaceViewSet, basename='place')
 
-# Nested router for districts under a province
-district_router = routers.NestedSimpleRouter(router, r'provinces', lookup='province')
-district_router.register(r'districts', DistrictViewSet, basename='province-districts')
-
-# Nested router for cities under a district
-city_router = routers.NestedSimpleRouter(district_router, r'districts', lookup='district')
-city_router.register(r'cities', CityViewSet, basename='district-cities')
-
-# Nested router for wards under a city
-ward_router = routers.NestedSimpleRouter(city_router, r'cities', lookup='city')
-ward_router.register(r'wards', WardViewSet, basename='city-wards')
-
-# Nested router for places under a ward
-place_router = routers.NestedSimpleRouter(ward_router, r'wards', lookup='ward')
-place_router.register(r'places', PlaceViewSet, basename='ward-places')
-
-# Include all the routers in urlpatterns
 urlpatterns = [
     path('api/', include(router.urls)),
-    path('api/', include(district_router.urls)),
-    path('api/', include(city_router.urls)),
-    path('api/', include(ward_router.urls)),
-    path('api/', include(place_router.urls)),
 ]

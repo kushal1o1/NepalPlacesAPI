@@ -1,53 +1,41 @@
 from rest_framework import viewsets
+from django.shortcuts import get_object_or_404
 from .models import Province, District, City, Ward, Place
 from .serializers import ProvinceSerializer, DistrictSerializer, CitySerializer, WardSerializer, PlaceSerializer
-from rest_framework.permissions import AllowAny
 
 class ProvinceViewSet(viewsets.ModelViewSet):
     queryset = Province.objects.all()
     serializer_class = ProvinceSerializer
-    permission_classes = [AllowAny]
+    lookup_field = 'name'  # Use 'name' instead of 'id'
 
 class DistrictViewSet(viewsets.ModelViewSet):
     serializer_class = DistrictSerializer
-    permission_classes = [AllowAny]
+    lookup_field = 'name'  # Use 'name' as primary key
 
     def get_queryset(self):
-        return District.objects.filter(province_id=self.kwargs['province_pk'])
-
-    def perform_create(self, serializer):
-        province = Province.objects.get(pk=self.kwargs['province_pk'])
-        serializer.save(province=province)
+        province_name = self.kwargs['province_name']
+        return District.objects.filter(province__name=province_name)
 
 class CityViewSet(viewsets.ModelViewSet):
     serializer_class = CitySerializer
-    permission_classes = [AllowAny]
+    lookup_field = 'name'  # Use 'name' as primary key
 
     def get_queryset(self):
-        return City.objects.filter(district_id=self.kwargs['district_pk'])
-
-    def perform_create(self, serializer):
-        district = District.objects.get(pk=self.kwargs['district_pk'])
-        serializer.save(district=district)
+        district_name = self.kwargs['district_name']
+        return City.objects.filter(district__name=district_name)
 
 class WardViewSet(viewsets.ModelViewSet):
     serializer_class = WardSerializer
-    permission_classes = [AllowAny]
+    lookup_field = 'name'  # Use 'name' as primary key
 
     def get_queryset(self):
-        return Ward.objects.filter(city_id=self.kwargs['city_pk'])
-
-    def perform_create(self, serializer):
-        city = City.objects.get(pk=self.kwargs['city_pk'])
-        serializer.save(city=city)
+        city_name = self.kwargs['city_name']
+        return Ward.objects.filter(city__name=city_name)
 
 class PlaceViewSet(viewsets.ModelViewSet):
     serializer_class = PlaceSerializer
-    permission_classes = [AllowAny]
+    lookup_field = 'name'  # Use 'name' as primary key
 
     def get_queryset(self):
-        return Place.objects.filter(ward_id=self.kwargs['ward_pk'])
-
-    def perform_create(self, serializer):
-        ward = Ward.objects.get(pk=self.kwargs['ward_pk'])
-        serializer.save(ward=ward)
+        ward_name = self.kwargs['ward_name']
+        return Place.objects.filter(ward__name=ward_name)
