@@ -36,15 +36,21 @@ class City(models.Model):
 class Ward(models.Model):
     city = models.ForeignKey(City, related_name='wards', on_delete=models.CASCADE)
     ward_no = models.PositiveIntegerField()  # Ward number
-    name = models.CharField(max_length=100, primary_key=True)  # Using name as primary key
+    name = models.CharField(max_length=100,primary_key=True)  # Using name as primary key
+
+    class Meta:
+            unique_together = ('city', 'ward_no')  # Ensures that within a city, ward_no is unique
 
     def __str__(self):
-        return self.name
+            return f'Ward {self.ward_no}, {self.city.name}'
 
 class Place(models.Model):
+    city = models.ForeignKey(City, related_name='places', on_delete=models.CASCADE,default="Pokhara")
     ward = models.ForeignKey(Ward, related_name='places', on_delete=models.CASCADE)
-    name = models.CharField(max_length=100, primary_key=True)  # Using name as primary key
+    name = models.CharField(max_length=100,primary_key=True)  
     description = models.TextField(blank=True, null=True)
 
+    class Meta:
+        unique_together = ('city', 'ward', 'name')
     def __str__(self):
-        return self.name
+        return f'{self.name}, {self.ward.name}, {self.city.name}'
