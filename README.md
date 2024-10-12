@@ -17,6 +17,80 @@ Nepal Places API is an open-source RESTful API that provides detailed informatio
   
 - Access places within each district.
 
+# Place API Filtering Documentation
+
+## Overview
+
+This API allows you to retrieve a list of places, with filtering capabilities based on several parameters. You can filter places by `placetype` and `name`. The filtering options are case-sensitive and help refine your search to find relevant places.
+## Query Parameters for Filtering
+## GET /api/places/
+### 1. `placetype`
+
+Filters places by the type of place. The available options for `placetype` are:
+
+- `Famous_places`: Famous Places
+- `Religious_places`: Religious Places
+- `Historical_sites`: Historical Sites
+- `Natural_attractions`: Natural Attractions
+- `Cultural_sites`: Cultural Sites
+- `Educational_institions`: Educational Institutions
+- `Healthcare_facilities`: Healthcare Facilities
+- `Commercial_areas`: Commercial Areas
+- `Residential_areas`: Residential Areas
+- `Public_services`: Public Services
+
+## GET /api/places/?placetype=Famous_places 
+#### Example Response:
+```json
+[
+    {
+        "name": "Pashupatinath Temple",
+        "description": "One of the most sacred Hindu temples.",
+        "placetype": "Religious_places"
+    },
+    {
+        "name": "Bouddhanath Stupa",
+        "description": "One of the largest stupas in Nepal.",
+        "placetype": "Religious_places"
+    }
+] 
+```
+### 2. `name`
+Filters places by the  name. The name should be the exact name of the ward as listed.
+
+## GET /api/places/?name=Kalimati
+#### Example Response:
+```json
+[
+   {
+      "name": "Kalimati",
+      "description": "A popular residential area in Pokhara.",
+      "placetype": "Residential_areas"
+      }
+      ]
+```
+### 3. Combined Filtering
+## Query Parameters for Combined Filtering
+
+You can combine the following parameters:
+
+- **`placetype`**: Type of place (e.g., `Famous_places`, `Religious_places`, `Historical_sites`, etc.)
+- **`name`**: The exact name of the place.
+
+## Example Combined Filter Request
+
+To filter places based on both place type and ward name, you can use:
+
+## Overview
+
+This API allows combining multiple filters to refine your search. You can filter places by both `placetype` and `ward_name` at the same time.
+
+## API Endpoint
+      
+
+## API Endpoint
+
+
 ## API Endpoints
 ### Provinces
 - `GET /api/provinces/` - List all provinces

@@ -41,7 +41,13 @@ INSTALLED_APPS = [
     'api',
     
     'import_export',
+    'django_filters',
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
