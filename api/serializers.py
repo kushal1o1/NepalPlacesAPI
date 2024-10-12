@@ -4,7 +4,7 @@ from .models import Province, District, City, Ward, Place
 class PlaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Place
-        fields = ['name', 'description']
+        fields = ['name','place_type', 'description']
 
 class WardSerializer(serializers.ModelSerializer):
     places = PlaceSerializer(many=True, read_only=True)

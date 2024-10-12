@@ -1,5 +1,17 @@
 from django.db import models
 
+PLACE_TYPE_CHOICES = [
+        ('Famous_places', 'Famous Places'),
+        ('Religious_places', 'Religious Places'),
+        ('Historical_sites', 'Historical Sites'),
+        ('Natural_attractions', 'Natural Attractions'),
+        ('Cultural_sites', 'Cultural Sites'),
+        ('Educational_institions', 'Educational Institutions'),
+        ('Healthcare_facilities', 'Healthcare Facilities'),
+        ('Commercial_areas', 'Commercial Areas'),
+        ('Residential_areas', 'Residential Areas'),
+        ('Public_services', 'Public Services'),
+    ]
 class Province(models.Model):
     name = models.CharField(max_length=100, primary_key=True,unique=True)  # Using name as primary key
     headquarters = models.CharField(max_length=100)
@@ -49,6 +61,7 @@ class Place(models.Model):
     ward = models.ForeignKey(Ward, related_name='places', on_delete=models.CASCADE)
     name = models.CharField(max_length=100,primary_key=True)  
     description = models.TextField(blank=True, null=True)
+    place_type = models.CharField(max_length=50, choices=PLACE_TYPE_CHOICES,default="Residential_areas")
 
     class Meta:
         unique_together = ('city', 'ward', 'name')

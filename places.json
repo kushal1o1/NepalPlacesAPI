@@ -1,56 +1,121 @@
 [
-    {
+  {
     "city": "Pokhara",
     "ward": "22",
     "name": "Dhunge_Pani",
-    "description": "A village located in Pokhara Metropolitan Ward No. 22."
+    "description": "A village located in Pokhara Metropolitan Ward No. 22.",
+    "place_type": "Residential_areas"
   },
   {
     "city": "Pokhara",
     "ward": "22",
     "name": "Tilahar",
-    "description": "The main hamlet in Pokhara Metropolitan Ward No. 22."
+    "description": "The main hamlet in Pokhara Metropolitan Ward No. 22.",
+    "place_type": "Residential_areas"
   },
   {
     "city": "Pokhara",
     "ward": "22",
     "name": "Khadekhola",
-    "description": "A hamlet within Pokhara Metropolitan Ward No. 22."
+    "description": "A hamlet within Pokhara Metropolitan Ward No. 22.",
+    "place_type": "Residential_areas"
   },
   {
     "city": "Pokhara",
     "ward": "22",
     "name": "Thulibidi",
-    "description": "Another hamlet present in Pokhara Metropolitan Ward No. 22."
+    "description": "Another hamlet present in Pokhara Metropolitan Ward No. 22.",
+    "place_type": "Residential_areas"
   },
   {
     "city": "Pokhara",
     "ward": "22",
     "name": "Bhumdikot Mandir Marga",
-    "description": "A street in Pokhara Metropolitan Ward No. 22."
+    "description": "A street in Pokhara Metropolitan Ward No. 22.",
+    "place_type": "Residential_areas"
   },
   {
     "city": "Pokhara",
     "ward": "22",
     "name": "Peace Pagoda Road",
-    "description": "A secondary road in Pokhara Metropolitan Ward No. 22."
+    "description": "A secondary road in Pokhara Metropolitan Ward No. 22.",
+    "place_type": "Cultural_sites"
   },
   {
     "city": "Pokhara",
     "ward": "22",
     "name": "Pumdikot Marga",
-    "description": "A path in Pokhara Metropolitan Ward No. 22."
+    "description": "A path in Pokhara Metropolitan Ward No. 22.",
+    "place_type": "Natural_attractions"
   },
   {
     "city": "Pokhara",
     "ward": "22",
     "name": "Taari_Road",
-    "description": "A street in Pokhara Metropolitan Ward No. 22."
+    "description": "A street in Pokhara Metropolitan Ward No. 22.",
+    "place_type": "Residential_areas"
   },
   {
     "city": "Pokhara",
     "ward": "22",
     "name": "Kalimati",
-    "description": "Nice village with peaceful surrounding."
+    "description": "Nice village with peaceful surrounding.",
+    "place_type": "Natural_attractions"
+  },
+  {
+    "city": "Pokhara",
+    "ward": "22",
+    "name": "Green Pasture Hospital",
+    "description": "A well-known hospital in Ward No. 22 providing specialized healthcare services.",
+    "place_type": "Healthcare_facilities"
+  },
+  {
+    "city": "Pokhara",
+    "ward": "22",
+    "name": "Shree Pratibha Residential School",
+    "description": "A private educational institution in Ward No. 22.",
+    "place_type": "Educational_institions"
+  },
+  {
+    "city": "Pokhara",
+    "ward": "22",
+    "name": "Shree Bhumdikot Secondary School",
+    "description": "A public secondary school in Ward No. 22.",
+    "place_type": "Educational_institions"
+  },
+  {
+    "city": "Pokhara",
+    "ward": "22",
+    "name": "Fewa City Hospital",
+    "description": "A private hospital providing general healthcare services in Ward No. 22.",
+    "place_type": "Healthcare_facilities"
+  },
+  {
+    "city": "Pokhara",
+    "ward": "22",
+    "name": "Pumdikot Viewpoint",
+    "description": "A famous viewpoint in Ward No. 22 offering stunning views of Pokhara Valley and the Annapurna range.",
+    "place_type": "Natural_attractions"
+  },
+  {
+    "city": "Pokhara",
+    "ward": "22",
+    "name": "Lakeside Heights",
+    "description": "A residential area with scenic views of Phewa Lake.",
+    "place_type": "Residential_areas"
+  },
+  {
+    "city": "Pokhara",
+    "ward": "22",
+    "name": "World Peace Pagoda",
+    "description": "A famous religious and tourist site offering panoramic views of Pokhara and the Himalayas.",
+    "place_type": "Religious_places"
+  },
+  {
+    "city": "Pokhara",
+    "ward": "22",
+    "name": "Bhumdikot Temple",
+    "description": "A historical temple located in the hilly areas of Ward No. 22.",
+    "place_type": "Religious_places"
   }
 ]
