@@ -36,7 +36,7 @@ class CityViewSet(viewsets.ModelViewSet):
     search_fields = ['name','city_type',"wards__ward_no","wards__name"]
 
     def get_queryset(self):
-        district_name = self.request.query_params.get('district_name', None)
+        district_name = self.kwargs.get('district_name', None)
         if district_name:
             return City.objects.filter(district__name=district_name)
         return City.objects.all()  # For flat access
