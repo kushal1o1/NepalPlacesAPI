@@ -9,6 +9,11 @@ router.register(r'provinces/(?P<province_name>[^/.]+)/districts/(?P<district_nam
 router.register(r'provinces/(?P<province_name>[^/.]+)/districts/(?P<district_name>[^/.]+)/cities/(?P<city_name>[^/.]+)/wards', WardViewSet, basename='ward')
 router.register(r'provinces/(?P<province_name>[^/.]+)/districts/(?P<district_name>[^/.]+)/cities/(?P<city_name>[^/.]+)/wards/(?P<ward_name>[^/.]+)/places', PlaceViewSet, basename='place')
 
+router.register(r'districts', DistrictViewSet, basename='district_flat')
+router.register(r'cities', CityViewSet, basename='city_flat')
+router.register(r'wards', WardViewSet, basename='ward_flat')
+router.register(r'places', PlaceViewSet, basename='place_flat')
+
 urlpatterns = [
     path('api/', include(router.urls)),
 ]

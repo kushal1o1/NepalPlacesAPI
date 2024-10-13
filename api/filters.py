@@ -24,9 +24,27 @@ class ProvinceFilter(django_filters.FilterSet):
     min_districts = filters.NumberFilter(field_name="number_of_districts", lookup_expr='gte')
     max_districts = filters.NumberFilter(field_name="number_of_districts", lookup_expr='lte')
 
+    district_name = filters.CharFilter(field_name='districts__name', lookup_expr='icontains')  # Filter provinces by district name
+    district_headquarters = filters.CharFilter(field_name='districts__headquarters', lookup_expr='icontains')  # Filter by district headquarters
+    min_district_area = filters.NumberFilter(field_name='districts__area', lookup_expr='gte')  # Filter districts by minimum area
+    max_district_area = filters.NumberFilter(field_name='districts__area', lookup_expr='lte')  # Filter districts by maximum area
+    min_district_population = filters.NumberFilter(field_name='districts__population', lookup_expr='gte')  # Filter districts by minimum population
+    max_district_population = filters.NumberFilter(field_name='districts__population', lookup_expr='lte')  # Filter districts by maximum population
+    
+      # Filters for related City fields
+    city_name = filters.CharFilter(field_name='districts__cities__name', lookup_expr='icontains')  # Filter provinces by city name
+   
+
+
+    # Filters for related Place fields
+    place_name = filters.CharFilter(field_name='districts__cities__wards__places__name', lookup_expr='icontains')  # Filter provinces by place name
+   
     class Meta:
         model = Province
-        fields = ['headquarters','name','min_area', 'max_area', 'min_population', 'max_population', 'min_districts', 'max_districts']
+        fields = ['headquarters','name','min_area', 'max_area','min_population', 'max_population','min_districts', 'max_districts', 'district_name','district_headquarters','min_district_area','max_district_area','min_district_population','max_district_population','city_name',
+            'place_name',
+
+        ]
         
         
 class DistrictFilter(filters.FilterSet):
