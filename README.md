@@ -316,6 +316,31 @@ To enhance the performance of the API, we have implemented caching using **Redis
 - Ensure you have **Django** and **Django REST Framework** installed.
 - Install **Redis** on your server or use a cloud-based Redis service.
 
+
+## Rate Limiting
+
+### Overview
+
+Rate limiting is a technique used to control the amount of incoming requests to an API, helping to prevent abuse and ensuring fair usage among users. This feature limits the number of requests a user can make to the API within a specified time frame.
+
+### Why Use Rate Limiting?
+
+- **Prevent Abuse:** Protects the API from being overwhelmed by too many requests from a single user, which could lead to performance degradation or downtime.
+- **Fair Usage:** Ensures that all users have equal access to the API resources, preventing any single user from monopolizing the service.
+- **Cost Management:** Helps in managing the costs associated with server resources and bandwidth usage, especially in cloud environments where pricing may depend on usage.
+- **Enhanced Security:** Reduces the risk of denial-of-service attacks by limiting the number of requests an attacker can make.
+
+### Implementation
+
+In this project, we have implemented rate limiting using the `django_ratelimit` library. Below are the key components of the implementation:
+
+**Decorator Usage:**
+
+   The `@ratelimit` decorator is used in the viewset to specify the rate limit. For example, in the `ProvinceViewSet`, we set a limit of **5 requests per minute** per IP address.
+
+   ```python
+   @method_decorator(ratelimit(key='ip', rate='5/m', method='GET', block=False)) #5 request per min 
+```
 ## Installation
 
 ### Prerequisites
