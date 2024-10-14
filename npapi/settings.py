@@ -78,6 +78,16 @@ TEMPLATES = [
         },
     },
 ]
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379/1',  # Redis server location
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        },
+        'KEY_PREFIX': 'npapi' 
+    }
+}
 
 WSGI_APPLICATION = 'npapi.wsgi.application'
 

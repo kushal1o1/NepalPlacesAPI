@@ -5,7 +5,10 @@ from .serializers import ProvinceSerializer, DistrictSerializer, CitySerializer,
 from django_filters.rest_framework import DjangoFilterBackend
 from .filters import PlaceFilter ,ProvinceFilter,DistrictFilter,CityFilter,WardFilter
 from rest_framework.filters import SearchFilter,OrderingFilter
-
+from django.views.decorators.cache import cache_page
+from django.utils.decorators import method_decorator
+from django.core.cache import cache
+from rest_framework.response import Response
 
 class ProvinceViewSet(viewsets.ModelViewSet):
     queryset = Province.objects.all()
@@ -15,6 +18,9 @@ class ProvinceViewSet(viewsets.ModelViewSet):
     filterset_class = ProvinceFilter
     search_fields = ['name', 'headquarters', 'districts__name', 'districts__cities__name', 'districts__cities__wards__name', 'districts__cities__wards__places__name']
     ordering_fields = ['name', 'population', 'area','headquarters','districts__name']
+    @method_decorator(cache_page(60 * 15))  # Cache for 15 minutes
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
 
 class DistrictViewSet(viewsets.ModelViewSet):
     serializer_class = DistrictSerializer
@@ -73,8 +79,37 @@ class PlaceViewSet(viewsets.ModelViewSet):
     
 
     def get_queryset(self):
-        ward_name = self.request.query_params.get('ward_name', None)
+        ward_name =  self.kwargs.get('ward_name', None)
         if ward_name:
-            return Place.objects.filter(ward_name=ward_name)
+            return Place.objects.filter(name=ward_name)
         return Place.objects.all()  # For flat access
-       
+    def list(self, request, *args, **kwargs):
+        ward_name = self.kwargs.get('ward_name')
+        cache_key = f'places_{ward_name}'
+        cached_data = cache.get(cache_key)
+        
+        if cached_data:
+            return Response(cached_data)
+        
+        queryset = self.get_queryset()
+        serializer = self.get_serializer(queryset, many=True)
+        
+        # Cache the result for 10 minutes
+        cache.set(cache_key, serializer.data, 60 * 10)
+        
+        return Response(serializer.data)
+    
+    def create(self, request, *args, **kwargs):
+        response = super().create(request, *args, **kwargs)
+        cache.delete(f'places_{self.kwargs.get("ward_name")}')
+        return response
+
+    def update(self, request, *args, **kwargs):
+        response = super().update(request, *args, **kwargs)
+        cache.delete(f'places_{self.kwargs.get("ward_name")}')
+        return response
+
+    def destroy(self, request, *args, **kwargs):
+        response = super().destroy(request, *args, **kwargs)
+        cache.delete(f'places_{self.kwargs.get("ward_name")}')
+        return response

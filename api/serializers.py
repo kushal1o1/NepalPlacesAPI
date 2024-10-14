@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Province, District, City, Ward, Place
 
+
 class PlaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Place
@@ -33,3 +34,5 @@ class ProvinceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Province
         fields = ['name', 'headquarters', 'area', 'population', 'number_of_districts', 'districts']
+        
+

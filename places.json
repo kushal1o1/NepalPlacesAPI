@@ -117,5 +117,135 @@
     "name": "Bhumdikot Temple",
     "description": "A historical temple located in the hilly areas of Ward No. 22.",
     "place_type": "Religious_places"
-  }
+  },
+
+
+
+    {  
+       "city": "Pokhara",
+        "ward": "17", 
+        "name": "Damside_Marg",
+        "place_type": "Public_services",
+        "description": "A major road in the area."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Dam Side Marga",
+        "place_type": "Public_services",
+        "description": "Another primary road in the area."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Fewa Sundar Marga",
+        "place_type": "Natural_attractions",
+        "description": "A scenic road near Fewa Lake."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Janagaran Marg",
+        "place_type": "Public_services",
+        "description": "A significant road in the ward."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Musetuda Marg",
+        "place_type": "Public_services",
+        "description": "A primary road in the area."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Museum Marg",
+        "place_type": "Famous_places",
+        "description": "A road leading to local museums."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Namuna Marga",
+        "place_type": "Public_services",
+        "description": "A notable road in the ward."
+    },
+    {
+      "city": "Pokhara",
+      "ward": "17",  
+      "name": "Pardi Bazar",
+        "place_type": "Commercial_areas",
+        "description": "A bustling market area."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Pardi Marg",
+        "place_type": "Public_services",
+        "description": "A secondary road in the area."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Rameshwar Marg",
+        "place_type": "Public_services",
+        "description": "A major road in the ward."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Rameshwor Marg",
+        "place_type": "Public_services",
+        "description": "Another primary road in the area."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Rastra Bank Chowk",
+        "place_type": "Public_services",
+        "description": "A key intersection near the central bank."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Ratna Puri",
+        "place_type": "Public_services",
+        "description": "A primary road in the area."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Shishuniketan Marg",
+        "place_type": "Public_services",
+        "description": "A smaller road in the ward."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Shital Marg",
+        "place_type": "Public_services",
+        "description": "A tertiary road in the area."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Sidhartha Highway",
+        "place_type": "Public_services",
+        "description": "A major highway passing through the ward."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Sital_Marg",
+        "place_type": "Public_services",
+        "description": "Another tertiary road in the area."
+    },
+    {
+        "city": "Pokhara",
+        "ward": "17",
+        "name": "Street_2",
+        "place_type": "Public_services",
+        "description": "A smaller road in the ward."
+    }
 ]
+
