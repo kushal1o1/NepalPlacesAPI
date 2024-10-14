@@ -9,6 +9,8 @@ from django.views.decorators.cache import cache_page
 from django.utils.decorators import method_decorator
 from django.core.cache import cache
 from rest_framework.response import Response
+from django_ratelimit.decorators import ratelimit
+from rest_framework import status
 
 class ProvinceViewSet(viewsets.ModelViewSet):
     queryset = Province.objects.all()
@@ -18,8 +20,13 @@ class ProvinceViewSet(viewsets.ModelViewSet):
     filterset_class = ProvinceFilter
     search_fields = ['name', 'headquarters', 'districts__name', 'districts__cities__name', 'districts__cities__wards__name', 'districts__cities__wards__places__name']
     ordering_fields = ['name', 'population', 'area','headquarters','districts__name']
+    
+
     @method_decorator(cache_page(60 * 15))  # Cache for 15 minutes
+    @method_decorator(ratelimit(key='ip', rate='5/m', method='GET', block=False))
     def list(self, request, *args, **kwargs):
+        if request.limited:
+            return Response({'error': 'Rate limit exceeded.Please retry in a minute.'}, status=status.HTTP_429_TOO_MANY_REQUESTS)
         return super().list(request, *args, **kwargs)
 
 class DistrictViewSet(viewsets.ModelViewSet):
