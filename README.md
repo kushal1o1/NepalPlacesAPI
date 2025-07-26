@@ -352,7 +352,7 @@ In this project, we have implemented rate limiting using the `django_ratelimit` 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/nepal-places-api.git
+   git clone https://github.com/kushal1o1/nepal-places-api.git
    cd nepal-places-api
     ```
 2. **Create a virtual environment:**
