@@ -1,4 +1,4 @@
-# API Documentation
+# API Documentation (Currently v1)
 
 <div align="center">
 
@@ -18,42 +18,54 @@
 
 ## API Endpoints
 
+## Base URL
+
+All endpoints are versioned to allow backward compatibility and smooth upgrades.
+
+**Format:**
+```cmd
+/api/{version}/{resource}/
+```
+
+**Current Version:** `v1`
+
+
 ### 🧩 Minimal Mode
 
 For a lightweight response, use the query parameter `?minimal=true` in any endpoint.  
 This will return **only the name field** for quick lookups or dropdowns.
 
-- `GET /api/provinces?minimal=true` – List all provinces (name only)
-- `GET /api/districts?minimal=true` – List all districts (name only)
-- `GET /api/cities?minimal=true` – List all cities (name only)
-- `GET /api/wards?minimal=true` – List all wards (name only)
-- `GET /api/places?minimal=true` – List all places (name only)
+- `GET /provinces?minimal=true` – List all provinces (name only)
+- `GET /districts?minimal=true` – List all districts (name only)
+- `GET /cities?minimal=true` – List all cities (name only)
+- `GET /wards?minimal=true` – List all wards (name only)
+- `GET /places?minimal=true` – List all places (name only)
 
 
 
 ### Provinces
-- `GET /api/provinces/` - List all provinces
-- `GET /api/provinces/{province_name}/` - Retrieve a specific province
+- `GET /provinces/` - List all provinces
+- `GET /provinces/{province_name}/` - Retrieve a specific province
 
 ### Districts
-- `GET /api/districts/` - List all districts 
-- `GET /api/provinces/{province_name}/districts/` - List all districts within a province
-- `GET /api/provinces/{province_name}/districts/{district_name}/` - Retrieve a specific district within a province
+- `GET /districts/` - List all districts 
+- `GET /provinces/{province_name}/districts/` - List all districts within a province
+- `GET /provinces/{province_name}/districts/{district_name}/` - Retrieve a specific district within a province
 
 ### Cities
-- `GET /api/cities/` - List all cities 
-- `GET /api/provinces/{province_name}/districts/{district_name}/cities/` - List all cities within a district
-- `GET /api/provinces/{province_name}/districts/{district_name}/cities/{city_name}/` - Retrieve a specific city within a district
+- `GET /cities/` - List all cities 
+- `GET /provinces/{province_name}/districts/{district_name}/cities/` - List all cities within a district
+- `GET /provinces/{province_name}/districts/{district_name}/cities/{city_name}/` - Retrieve a specific city within a district
 
 ### Wards
-- `GET /api/wards/` - List all wards 
-- `GET /api/provinces/{province_name}/districts/{district_name}/cities/{city_name}/wards/` - List all wards within a city
-- `GET /api/provinces/{province_name}/districts/{district_name}/cities/{city_name}/wards/{ward_name}/` - Retrieve a specific ward within a city
+- `GET /wards/` - List all wards 
+- `GET /provinces/{province_name}/districts/{district_name}/cities/{city_name}/wards/` - List all wards within a city
+- `GET /provinces/{province_name}/districts/{district_name}/cities/{city_name}/wards/{ward_name}/` - Retrieve a specific ward within a city
 
 ### Places
-- `GET /api/places/` - List all places
-- `GET /api/provinces/{province_name}/districts/{district_name}/cities/{city_name}/wards/{ward_name}/places/` - List all places within a ward
-- `GET /api/provinces/{province_name}/districts/{district_name}/cities/{city_name}/wards/{ward_name}/places/{place_name}/` - Retrieve a specific place within a ward
+- `GET /places/` - List all places
+- `GET /provinces/{province_name}/districts/{district_name}/cities/{city_name}/wards/{ward_name}/places/` - List all places within a ward
+- `GET /provinces/{province_name}/districts/{district_name}/cities/{city_name}/wards/{ward_name}/places/{place_name}/` - Retrieve a specific place within a ward
 
 ---
 
@@ -107,10 +119,10 @@ You can filter places by the following fields:
 ### Example: Filtering Places
 
 #### Endpoint
-`GET /api/places/`
+`GET /places/`
 
 #### Example Request
-`GET /api/places/?placetype=Famous_places&name=Temple`
+`GET /places/?placetype=Famous_places&name=Temple`
 
 #### Example Response
 ```json
@@ -138,7 +150,7 @@ Available options for `placetype`:
 - `Public_services`: Public Services
 
 #### Example: Filter by Place Type
-`GET /api/places/?placetype=Famous_places`
+`GET /places/?placetype=Famous_places`
 
 #### Example Response:
 ```json
@@ -157,7 +169,7 @@ Available options for `placetype`:
 ```
 
 #### Example: Filter by Name
-`GET /api/places/?name=Kalimati`
+`GET /places/?name=Kalimati`
 
 #### Example Response:
 ```json
@@ -188,10 +200,10 @@ The API provides the ability to search through different entities like provinces
 ### Example: Search Places
 
 #### Endpoint
-`GET /api/places/?search={query}`
+`GET /places/?search={query}`
 
 #### Example Request
-`GET /api/places/?search=Pashupatinath`
+`GET /places/?search=Pashupatinath`
 
 #### Example Response
 ```json
@@ -222,14 +234,14 @@ The API supports sorting for all the fields in the respective models. You can so
 ### Example: Sorting Places
 
 #### Endpoint
-`GET /api/places/?ordering={field}`
+`GET /places/?ordering={field}`
 
 #### Example Requests
 1. Sort places by name in ascending order:
-   `GET /api/places/?ordering=name`
+   `GET /places/?ordering=name`
 
 2. Sort places by population in descending order:
-   `GET /api/places/?ordering=-population`
+   `GET /places/?ordering=-population`
 
 ---
 
@@ -246,10 +258,10 @@ The API supports pagination to manage large datasets efficiently. Pagination bre
 ### Example: Paginated Request for Places
 
 #### Endpoint
-`GET /api/places/`
+`GET /places/`
 
 #### Example Request
-`GET /api/places/?page=2&page_size=5`
+`GET /places/?page=2&page_size=5`
 
 #### Example Response
 ```json

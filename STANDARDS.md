@@ -36,3 +36,10 @@
 ## 9. Admin default Password
 -user id `admin1`
 -password `openadmin`
+
+## 10. Maintain API versioning
+```cmd
+/api/{version}/{resource}/
+```
+
+## 11. Maintain RESTFUL API standards
