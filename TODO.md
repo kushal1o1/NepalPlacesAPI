@@ -4,7 +4,7 @@
    - LICENSE
    - STANDARDS
    - APIDOCS
-- [ ] ADD Versioning `api/v1` for backward compatibility
+- [x] ADD Versioning `api/v1` for backward compatibility
 - [ ] Refactor the Codebase
 - [ ] Write TestCases
 - [ ] Add Actual Relevant Data
