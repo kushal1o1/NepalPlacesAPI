@@ -9,3 +9,4 @@
 - [ ] Write TestCases
 - [ ] Add Actual Relevant Data
 - [ ] Dockerize 
+- [ ] CI actions using githubactions
