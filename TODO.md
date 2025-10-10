@@ -8,3 +8,4 @@
 - [ ] Refactor the Codebase
 - [ ] Write TestCases
 - [ ] Add Actual Relevant Data
+- [ ] Dockerize 
