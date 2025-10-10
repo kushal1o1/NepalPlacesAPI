@@ -1,0 +1,338 @@
+[
+    {
+        "city": "Pokhara",
+        "ward_no": "1",
+        "name": "Bagar"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "2",
+        "name": "Miruwa"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "3",
+        "name": "Nadipur"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "4",
+        "name": "Gairapatan"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "5",
+        "name": "Malepatan"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "6",
+        "name": "Baidam"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "7",
+        "name": "Masbar"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "8",
+        "name": "Shrijana Chowk"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "9",
+        "name": "Naya Bazar"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "10",
+        "name": "Amarsingh"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "11",
+        "name": "Ranipauwa"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "12",
+        "name": "Sital Devi"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "13",
+        "name": "Miya Patan"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "14",
+        "name": "Majheripatan"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "15",
+        "name": "Rambazar"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "16",
+        "name": "Batulechaur"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "17",
+        "name": "Birauta"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "18",
+        "name": "Sarangkot"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "19",
+        "name": "Lamachaur, Puranchaur"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "20",
+        "name": "Bhalam"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "21",
+        "name": "Nirmal Pokhari"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "22",
+        "name": "Pumdi Bhumdi"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "23",
+        "name": "Chapakot"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "24",
+        "name": "Kaskikot"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "25",
+        "name": "Hemja"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "26",
+        "name": "Budhi Bazar"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "27",
+        "name": "Tal Chowk"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "28",
+        "name": "Kalika"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "29",
+        "name": "Bhandardhik"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "30",
+        "name": "Khudi"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "31",
+        "name": "Begnas"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "32",
+        "name": "Gagangauda"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "33",
+        "name": "Bharat Pokhari"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "",
+        "name": "TOTAL"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "1",
+        "name": "Bagar"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "2",
+        "name": "Miruwa"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "3",
+        "name": "Nadipur"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "4",
+        "name": "Gairapatan"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "5",
+        "name": "Malepatan"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "6",
+        "name": "Baidam"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "7",
+        "name": "Masbar"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "8",
+        "name": "Shrijana Chowk"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "9",
+        "name": "Naya Bazar"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "10",
+        "name": "Amarsingh"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "11",
+        "name": "Ranipauwa"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "12",
+        "name": "Sital Devi"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "13",
+        "name": "Miya Patan"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "14",
+        "name": "Majheripatan"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "15",
+        "name": "Rambazar"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "16",
+        "name": "Batulechaur"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "17",
+        "name": "Birauta"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "18",
+        "name": "Sarangkot"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "19",
+        "name": "Lamachaur, Puranchaur"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "20",
+        "name": "Bhalam"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "21",
+        "name": "Nirmal Pokhari"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "22",
+        "name": "Pumdi Bhumdi"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "23",
+        "name": "Chapakot"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "24",
+        "name": "Kaskikot"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "25",
+        "name": "Hemja"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "26",
+        "name": "Budhi Bazar"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "27",
+        "name": "Tal Chowk"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "28",
+        "name": "Kalika"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "29",
+        "name": "Bhandardhik"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "30",
+        "name": "Khudi"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "31",
+        "name": "Begnas"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "32",
+        "name": "Gagangauda"
+    },
+    {
+        "city": "Pokhara",
+        "ward_no": "33",
+        "name": "Bharat Pokhari"
+    },
+
+]
