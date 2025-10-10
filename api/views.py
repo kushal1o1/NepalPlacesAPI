@@ -11,8 +11,9 @@ from django.core.cache import cache
 from rest_framework.response import Response
 from django_ratelimit.decorators import ratelimit
 from rest_framework import status
+from .services import MinimalResponseMixin
 
-class ProvinceViewSet(viewsets.ModelViewSet):
+class ProvinceViewSet(MinimalResponseMixin,viewsets.ModelViewSet):
     queryset = Province.objects.all()
     serializer_class = ProvinceSerializer
     lookup_field = 'name'  # Use 'name' instead of 'id'
@@ -88,7 +89,7 @@ class PlaceViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         ward_name =  self.kwargs.get('ward_name', None)
         if ward_name:
-            return Place.objects.filter(name=ward_name)
+            return Place.objects.filter(ward__name=ward_name)
         return Place.objects.all()  # For flat access
     def list(self, request, *args, **kwargs):
         ward_name = self.kwargs.get('ward_name')
