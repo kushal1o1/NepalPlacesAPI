@@ -2,19 +2,34 @@ from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 
 
+from rest_framework.response import Response
+
 class MinimalResponseMixin:
-    minimal_fields = ['name']  # default fields
+    minimal_fields = ['name']  # default minimal fields
 
     def list(self, request, *args, **kwargs):
         minimal = request.query_params.get('minimal', 'false').lower() == 'true'
         queryset = self.get_queryset()
 
+        # If ?minimal=true
         if minimal:
             data = queryset.values(*self.minimal_fields)
-            return Response(data)
+            page = self.paginate_queryset(data)
 
+            # ✅ Use DRF pagination dynamically
+            if page is not None:
+                return self.get_paginated_response(list(page))
+
+            # ✅ If no pagination (e.g., pagination disabled)
+            return Response({
+                'count': len(data),
+                'next': None,
+                'previous': None,
+                'results': list(data)
+            })
+
+        # Otherwise fallback to normal list()
         return super().list(request, *args, **kwargs)
-
 
 
 

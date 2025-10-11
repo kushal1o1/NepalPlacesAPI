@@ -21,6 +21,9 @@ class Province(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        ordering = ['name'] 
 
 class District(models.Model):
     province = models.ForeignKey(Province, related_name='districts', on_delete=models.CASCADE)
@@ -31,6 +34,9 @@ class District(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        ordering = ['name'] 
 
 class City(models.Model):
     district = models.ForeignKey(District, related_name='cities', on_delete=models.CASCADE)
@@ -44,6 +50,9 @@ class City(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        ordering = ['name'] 
 
 class Ward(models.Model):
     city = models.ForeignKey(City, related_name='wards', on_delete=models.CASCADE)
@@ -55,6 +64,9 @@ class Ward(models.Model):
 
     def __str__(self):
             return f'Ward {self.ward_no}, {self.city.name}'
+        
+    class Meta:
+        ordering = ['name'] 
 
 class Place(models.Model):
     city = models.ForeignKey(City, related_name='places', on_delete=models.CASCADE,default="Pokhara")
@@ -65,5 +77,7 @@ class Place(models.Model):
 
     class Meta:
         unique_together = ('city', 'ward', 'name')
+        ordering = ['name'] 
+        
     def __str__(self):
         return f'{self.name}, {self.ward.name}, {self.city.name}'
