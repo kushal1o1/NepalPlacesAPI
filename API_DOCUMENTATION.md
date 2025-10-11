@@ -29,6 +29,17 @@ All endpoints are versioned to allow backward compatibility and smooth upgrades.
 
 **Current Version:** `v1`
 
+**Response Structure**
+```json
+
+{
+    "count": 7,
+    "next": null,
+    "previous": null,
+    "results": []
+}
+```
+
 
 ### 🧩 Minimal Mode
 
@@ -118,24 +129,41 @@ You can filter places by the following fields:
 - **placetype**: Exact match (case-insensitive)
 - **name**: Partial match (case-insensitive)
 
-### Example: Filtering Places
+### Example: Filtering Districts
 
 #### Endpoint
-`GET /places/`
+`GET /districts/`
 
 #### Example Request
-`GET /places/?placetype=Famous_places&name=Temple`
+`GET districts/?min_area=1000&max_area=1500&min_population=240000&max_population=&province_name=Karnali`
 
 #### Example Response
 ```json
-[
-    {
-        "name": "Pashupatinath Temple",
-        "ward": "Ward No. 7",
-        "description": "One of the most sacred Hindu temples.",
-        "placetype": "Religious_places"
-    }
-]
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "name": "Salyan",
+            "headquarters": "Salyan",
+            "area": 1462.0,
+            "population": 242444,
+            "cities": [
+                {
+                    "name": "Bagchaur",
+                    "city_type": "municipality",
+                    "wards": []
+                },
+                {
+                    "name": "Sharada",
+                    "city_type": "municipality",
+                    "wards": []
+                }
+            ]
+        }
+    ]
+}
 ```
 
 ### Place Types
@@ -156,32 +184,25 @@ Available options for `placetype`:
 
 #### Example Response:
 ```json
-[
+{
+    "count": 77,
+    "next": "http://localhost:8000/api/v1/places/?placetype=Famous_places?page=2",
+    "previous": null,
+    "results":
+    [
     {
         "name": "Pashupatinath Temple",
         "description": "One of the most sacred Hindu temples.",
-        "placetype": "Religious_places"
+        "placetype": "Famous_places"
     },
     {
         "name": "Bouddhanath Stupa",
         "description": "One of the largest stupas in Nepal.",
-        "placetype": "Religious_places"
+        "placetype": "Famous_places"
     }
-]
-```
+    ]
+}
 
-#### Example: Filter by Name
-`GET /places/?name=Kalimati`
-
-#### Example Response:
-```json
-[
-   {
-      "name": "Kalimati",
-      "description": "A popular residential area in Pokhara.",
-      "placetype": "Residential_areas"
-   }
-]
 ```
 
 ---
@@ -209,14 +230,19 @@ The API provides the ability to search through different entities like provinces
 
 #### Example Response
 ```json
-[
-    {
+{
+    "count": 77,
+    "next": "http://localhost:8000/api/v1/places/?search=Pashupatinath`
+?page=2",
+    "previous": null,
+    "results":
+    [{
         "name": "Pashupatinath Temple",
         "ward": "Ward No. 7",
         "description": "One of the most sacred Hindu temples.",
         "placetype": "Religious_places"
-    }
-]
+    }]
+}
 ```
 
 ---
