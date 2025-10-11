@@ -40,6 +40,8 @@ This will return **only the name field** for quick lookups or dropdowns.
 - `GET /cities?minimal=true` – List all cities (name only)
 - `GET /wards?minimal=true` – List all wards (name only)
 - `GET /places?minimal=true` – List all places (name only)
+- `GET /provinces/districts/Gandaki?minimal=true` - List all districts in province Gandaki (name only) 
+- Likewise all endpoints support minimal 
 
 
 
