@@ -11,7 +11,13 @@ class MinimalResponseMixin:
 
         if minimal:
             data = queryset.values(*self.minimal_fields)
-            return Response(data)
+            return Response({
+                'count': len(data),
+                'next': None,
+                'previous': None,
+                'results': list(data)
+            })
+
 
         return super().list(request, *args, **kwargs)
 
