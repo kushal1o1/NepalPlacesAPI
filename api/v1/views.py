@@ -76,37 +76,48 @@ class WardViewSet(MinimalResponseMixin,viewsets.ModelViewSet):
             return Ward.objects.filter(city_name=city_name)
         return Ward.objects.all()  # For flat access
 
-class PlaceViewSet(MinimalResponseMixin,viewsets.ModelViewSet):
+class PlaceViewSet(MinimalResponseMixin, viewsets.ModelViewSet):
     serializer_class = PlaceSerializer
-    lookup_field = 'name'  # Use 'name' as primary key
-    filter_backends = [DjangoFilterBackend,SearchFilter,OrderingFilter]
+    lookup_field = 'name'
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = PlaceFilter
-    search_fields = ['name','description','place_type']
-    ordering_fields = ['name','place_type']
-    
-    
+    search_fields = ['name', 'description', 'place_type']
+    ordering_fields = ['name', 'place_type']
 
     def get_queryset(self):
-        ward_name =  self.kwargs.get('ward_name', None)
+        ward_name = self.kwargs.get('ward_name', None)
         if ward_name:
             return Place.objects.filter(ward__name=ward_name)
-        return Place.objects.all()  # For flat access
+        return Place.objects.all()
+
     def list(self, request, *args, **kwargs):
         ward_name = self.kwargs.get('ward_name')
         cache_key = f'places_{ward_name}'
         cached_data = cache.get(cache_key)
-        
+
         if cached_data:
             return Response(cached_data)
-        
+
         queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        
-        # Cache the result for 10 minutes
-        cache.set(cache_key, serializer.data, 60 * 10)
-        
-        return Response(serializer.data)
-    
+        page = self.paginate_queryset(queryset)
+
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            response = self.get_paginated_response(serializer.data)
+        else:
+            serializer = self.get_serializer(queryset, many=True)
+            response = Response({
+                'count': len(serializer.data),
+                'next': None,
+                'previous': None,
+                'results': serializer.data
+            })
+
+        # ✅ Cache entire paginated response for 10 minutes
+        cache.set(cache_key, response.data, 60 * 10)
+        return response
+
+    # Invalidate cache on changes
     def create(self, request, *args, **kwargs):
         response = super().create(request, *args, **kwargs)
         cache.delete(f'places_{self.kwargs.get("ward_name")}')
