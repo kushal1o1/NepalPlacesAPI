@@ -5,8 +5,8 @@
    - STANDARDS
    - APIDOCS
 - [x] ADD Versioning `api/v1` for backward compatibility
-- [ ] Refactor the Codebase
-- [ ] Write TestCases
+- [x] Refactor the Codebase
+- [x] Write TestCases
 - [ ] Add Actual Relevant Data
 - [ ] Dockerize 
 - [ ] CI actions using githubactions
