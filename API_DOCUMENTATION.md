@@ -30,6 +30,8 @@ All endpoints are versioned to allow backward compatibility and smooth upgrades.
 **Current Version:** `v1`
 
 **Response Structure**
+
+**Sucess**
 ```json
 
 {
@@ -38,6 +40,17 @@ All endpoints are versioned to allow backward compatibility and smooth upgrades.
     "previous": null,
     "results": []
 }
+```
+**Failure**
+```json
+{
+  "success": false,
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "District name is required."
+  }
+}
+
 ```
 
 

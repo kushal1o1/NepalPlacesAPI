@@ -11,7 +11,7 @@ from django.core.cache import cache
 from rest_framework.response import Response
 from django_ratelimit.decorators import ratelimit
 from rest_framework import status
-from ..services import MinimalResponseMixin
+from ..services import MinimalResponseMixin , error_response
 
 class ProvinceViewSet(MinimalResponseMixin,viewsets.ModelViewSet):
     queryset = Province.objects.all()
@@ -27,7 +27,9 @@ class ProvinceViewSet(MinimalResponseMixin,viewsets.ModelViewSet):
     @method_decorator(ratelimit(key='ip', rate='5/m', method='GET', block=False))
     def list(self, request, *args, **kwargs):
         if request.limited:
-            return Response({'error': 'Rate limit exceeded.Please retry in a minute.'}, status=status.HTTP_429_TOO_MANY_REQUESTS)
+            return error_response(
+                code='RATE_LIMIT_EXCEEDED',
+                message='Rate limit exceeded. Please retry in a minute.', http_status=status.HTTP_429_TOO_MANY_REQUESTS)
         return super().list(request, *args, **kwargs)
 
 class DistrictViewSet(MinimalResponseMixin,viewsets.ModelViewSet):

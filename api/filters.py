@@ -3,12 +3,11 @@ from .models import Place,Province,District,City,Ward
 from django_filters import rest_framework as filters
 
 class PlaceFilter(django_filters.FilterSet):
-    placetype = django_filters.CharFilter(field_name='placetype', lookup_expr='iexact')  # Exact match
     name = django_filters.CharFilter(field_name='name', lookup_expr='icontains')  # Partial match (case-insensitive)
 
     class Meta:
         model = Place
-        fields = ['placetype', 'name']
+        fields = ['place_type', 'name']
         
 class ProvinceFilter(django_filters.FilterSet):
     name = django_filters.CharFilter(field_name='name', lookup_expr='icontains')  # Partial match (case-insensitive)

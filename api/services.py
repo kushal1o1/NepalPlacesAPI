@@ -1,5 +1,6 @@
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
+from rest_framework import status
 
 
 from rest_framework.response import Response
@@ -51,3 +52,15 @@ class CaseInsensitiveLookupMixin:
         # Check permissions
         self.check_object_permissions(self.request, obj)
         return obj
+
+
+
+
+def error_response(code, message, details=None, http_status=status.HTTP_400_BAD_REQUEST):
+    return Response({
+        "success": False,
+        "error": {
+            "code": code,
+            "message": message,
+        }
+    }, status=http_status)
