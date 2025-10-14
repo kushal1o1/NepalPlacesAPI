@@ -47,6 +47,7 @@ Nepal Places API is an open-source RESTful API that provides detailed informatio
    source env/bin/activate  # On Windows use `env\Scripts\activate`
    ```
 
+
 3. **Install the required packages:**
    ```bash
    pip install -r requirements.txt
@@ -60,6 +61,11 @@ Nepal Places API is an open-source RESTful API that provides detailed informatio
 5. **Run the Django server:**
    ```bash
    python manage.py runserver
+   ```
+
+**Using Docker:**
+   ```bash
+   docker-compose up --build
    ```
 
 6. **Access the API at http://127.0.0.1:8000/api/provinces/**
